@@ -1,12 +1,14 @@
-import { useState } from 'react';
-import { wordList } from './components/data/words';
+import { Buttons } from './components/buttons/buttons';
+import { WordGenerator } from './components/wordGenerator/WordGenereator';
+import { Header } from './header/Header';
 
 function App() {
 
   return (
     <>
-    <h1>Hang Man</h1>
-    <p>{wordList}</p>
+      <Header />
+      <WordGenerator />
+      <Buttons />
     </>
   )
 }

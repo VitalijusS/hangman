@@ -4,3 +4,21 @@ body * {
     margin: 0;
     padding: 0;
 }
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+h1 {
+    text-align: center;
+}
+.buttonContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.buttonContainer button {
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
