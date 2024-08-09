@@ -5,9 +5,13 @@ import { HiddenLetter } from "../hiddenLetter/Hiddenletter";
 import { HangMan } from "../hangman/HangMan";
 import { GameLost } from "../gameLost/GameLost";
 import { GameWon } from "../gameWon/GameWon";
+import { Score } from "../score/Score";
 
 localStorage.setItem('pressedLetters',JSON.stringify([]))
 const localData = [];
+if(localStorage.getItem('score')===null){
+    localStorage.setItem('score',JSON.stringify([0,0]))
+}
 let isWin = false;
 export function Buttons (){
     const [clicked, setToClicked] =useState({})
@@ -34,6 +38,7 @@ export function Buttons (){
 
     return (
         <>
+        <Score />
         {livesLeft===0?<GameLost />:''}
         {isWin?<GameWon />:''}
         <HangMan data={livesLeft} winStatus = {isWin}/>
