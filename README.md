@@ -12,9 +12,9 @@ Site published at: https://vitalijuss.github.io/hangman/
 ## 🎯 Project features/goals
 
 -   REACT
--   JS rendering (DOM)
--   JS events
--   localStorage
+-   Responsive design
+-   Working game
+-   LocalStorage
 
 ## 🧰 Getting Started
 

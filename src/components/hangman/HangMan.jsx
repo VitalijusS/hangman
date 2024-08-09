@@ -13,13 +13,10 @@ export function HangMan(params){
 
     const imageLits = [dead, img5, img4, img3, img2, img1,img0, win]
     return (
-        <div className='test2'>
-            <div className='imgContainer'>
-                <img src={hang} className='hangImg' alt="hang image" />
-                <img className='hangState' src={imageLits[params.data]} alt="hang state img" />
-
-            </div>
-
+        <div className='imgContainer'>
+            <img src={hang} className='hangImg' alt="hang image" />
+            <img className='hangState' src={imageLits[params.data]} alt="hang state img" />
         </div>
+
     )
 }

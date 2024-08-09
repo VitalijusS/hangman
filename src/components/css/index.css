@@ -25,10 +25,12 @@ h2 span {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 1rem;
 }
 .buttonContainer button {
     padding: 0.5rem 1rem;
     cursor: pointer;
+    gap: 1rem;
 }
 .buttonContainer button[data-state='included'] {
     background-color: green;
@@ -41,15 +43,14 @@ h2 span {
 }
 .imgContainer {
     position: relative;
-}
-.hangState {
-    position: absolute;
-    top: 105px;
-    left: 150px;
-}
-.test2 {
     height: 600px;
     display: block;
+}
+.hangState {
+    height: 350px;
+    position: absolute;
+    top: 105px;
+    left: 126px;
 }
 .hiddenLetterContainer {
     display: flex;
@@ -62,8 +63,8 @@ h2 span {
     border-bottom: 2px solid #333;
     width: 1em;
     text-align: center;
-    font-size: 2rem;
-    height: 1em;
+    font-size: 2em;
+    height: 1.2em;
 }
 .gameOver {
     z-index: 1;

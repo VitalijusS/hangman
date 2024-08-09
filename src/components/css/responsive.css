@@ -1,0 +1,94 @@
+@media (max-width: 1200px) {
+    .buttonContainer {
+        gap: 0.3rem;
+    }
+    .buttonContainer button {
+        padding: 0.5rem 1rem;
+        cursor: pointer;
+    }
+
+    .hiddenLetterContainer {
+        gap: 0.7rem;
+    }
+    .hiddenLetter {
+        width: 1.5em;
+        text-align: center;
+        font-size: 1.6em;
+        height: 1.3em;
+    }
+    .imgContainer {
+        height: 500px;
+    }
+    .hangState {
+        position: absolute;
+        height: 300px;
+        top: 95px;
+        left: 120px;
+    }
+    .hangImg {
+        height: 450px;
+    }
+}
+@media (max-width: 800px) {
+    .buttonContainer {
+        gap: 0.2rem;
+    }
+    .buttonContainer button {
+        padding: 0.4rem 0.8rem;
+        cursor: pointer;
+    }
+
+    .hiddenLetterContainer {
+        gap: 0.7rem;
+    }
+    .hiddenLetter {
+        width: 1.2em;
+        text-align: center;
+        font-size: 1.2em;
+        height: 1.4em;
+    }
+    .imgContainer {
+        height: 500px;
+    }
+    .hangState {
+        position: absolute;
+        height: 250px;
+        top: 84px;
+        left: 112px;
+    }
+    .hangImg {
+        height: 400px;
+    }
+}
+@media (max-width: 500px) {
+    .buttonContainer {
+        gap: 0.1rem;
+    }
+    .buttonContainer button {
+        padding: 0.2rem 0.5rem;
+        cursor: pointer;
+        gap: 0.1rem;
+    }
+
+    .hiddenLetterContainer {
+        gap: 0.5rem;
+    }
+    .hiddenLetter {
+        width: 1em;
+        text-align: center;
+        font-size: 1em;
+        height: 1.2em;
+    }
+    .imgContainer {
+        height: 350px;
+    }
+    .hangState {
+        position: absolute;
+        height: 200px;
+        top: 63px;
+        left: 80px;
+    }
+    .hangImg {
+        height: 300px;
+    }
+}
