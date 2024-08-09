@@ -52,6 +52,9 @@ h2 span {
     top: 105px;
     left: 126px;
 }
+.hangState.win {
+    top: 130px;
+}
 .hiddenLetterContainer {
     display: flex;
     justify-content: center;

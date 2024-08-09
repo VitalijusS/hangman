@@ -91,4 +91,7 @@
     .hangImg {
         height: 300px;
     }
+    .hangState.win {
+        top: 90px;
+    }
 }
