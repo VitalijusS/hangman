@@ -6,13 +6,12 @@ import { HangMan } from "../hangman/HangMan";
 
 localStorage.setItem('pressedLetters',JSON.stringify([]))
 const localData = [];
-
+let isWin = false;
 export function Buttons (){
     const [clicked, setToClicked] =useState({})
 
-
     function buttonPress(e){
-        if(!e.target.dataset.state && livesLeft > 0){
+        if(!e.target.dataset.state && livesLeft > 0 ){
             const letter = e.target.innerText;
             localData.push(letter);
             localStorage.setItem('pressedLetters',JSON.stringify(localData))
@@ -21,18 +20,22 @@ export function Buttons (){
                 [letter]: randomWord.includes(letter.toLowerCase())?'included':'notIncluded',
             }));
             checkLetter(letter);
-
+            checkIfWin()
         }
     }
-
+    function checkIfWin(){
+        if(randomWord.split('').
+        filter(letter =>!localData.includes(letter.toLocaleUpperCase())).length === 0){
+            isWin = true;
+        }
+        
+    }
 
     return (
         <>
         <HangMan data={livesLeft}/>
-        <HiddenLetter data={localData}/>
-        <h2 className="livesLeft ">Lives left: 
-            <span> {livesLeft}</span>    
-        </h2>
+        <HiddenLetter data={localData} winStatus = {isWin}/>
+        <h2 className="livesLeft ">Lives left:<span> {livesLeft}</span></h2>
 
         <div className="buttonContainer">
             <div>

@@ -56,10 +56,12 @@ h2 span {
     justify-content: center;
     align-content: center;
     gap: 1rem;
+    margin-bottom: 1rem;
 }
 .hiddenLetter {
     border-bottom: 2px solid #333;
-    width: 1rem;
+    width: 1em;
     text-align: center;
     font-size: 2rem;
+    height: 1em;
 }
