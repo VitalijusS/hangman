@@ -23,5 +23,17 @@ h1 {
     cursor: pointer;
 }
 .buttonContainer button[data-state='clicked'] {
-    background-color: red;
+    background-color: #333;
+}
+.imgContainer {
+    position: relative;
+}
+.hangState {
+    position: absolute;
+    top: 105px;
+    left: 150px;
+}
+.test2 {
+    height: 600px;
+    display: block;
 }

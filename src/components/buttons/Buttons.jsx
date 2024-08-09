@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { wordList } from "../data/words";
 
 export function Buttons (){
     const [clicked, setToClicked] =useState({})
