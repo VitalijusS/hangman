@@ -3,6 +3,8 @@ import { checkLetter, livesLeft } from "../checkLetters/check.letters";
 import { randomWord } from "../wordGenerator/WordGenereator";
 import { HiddenLetter } from "../hiddenLetter/Hiddenletter";
 import { HangMan } from "../hangman/HangMan";
+import { GameLost } from "../gameLost/GameLost";
+import { GameWon } from "../gameWon/GameWon";
 
 localStorage.setItem('pressedLetters',JSON.stringify([]))
 const localData = [];
@@ -11,7 +13,7 @@ export function Buttons (){
     const [clicked, setToClicked] =useState({})
 
     function buttonPress(e){
-        if(!e.target.dataset.state && livesLeft > 0 ){
+        if(!e.target.dataset.state && livesLeft > 0 && !isWin){
             const letter = e.target.innerText;
             localData.push(letter);
             localStorage.setItem('pressedLetters',JSON.stringify(localData))
@@ -32,6 +34,8 @@ export function Buttons (){
 
     return (
         <>
+        {livesLeft===0?<GameLost />:''}
+        {isWin?<GameWon />:''}
         <HangMan data={livesLeft} winStatus = {isWin}/>
         <HiddenLetter data={localData} />
         <h2 className="livesLeft ">Lives left:<span> {livesLeft}</span></h2>
