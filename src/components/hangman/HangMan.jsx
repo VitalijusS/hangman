@@ -4,18 +4,19 @@ import img2 from '/2.png';
 import img3 from '/3.png';
 import img4 from '/4.png';
 import img5 from '/5.png';
-import img6 from '/6.png';
 import dead from '/dead.png';
+import img0 from '/0.png';
 import win from '/win.png';
 export let hangManLives = 0;
 
-export function HangMan(){
-    const imageLits = [img1, img2, img3, img4, img5, img6, win, dead]
+export function HangMan(params){
+
+    const imageLits = [dead, img5, img4, img3, img2, img1,img0, win]
     return (
         <div className='test2'>
             <div className='imgContainer'>
                 <img src={hang} className='hangImg' alt="hang image" />
-                <img className='hangState' src={imageLits[hangManLives]} alt="hang state img" />
+                <img className='hangState' src={imageLits[params.data]} alt="hang state img" />
 
             </div>
 

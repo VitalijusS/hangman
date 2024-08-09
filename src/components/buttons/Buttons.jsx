@@ -28,13 +28,12 @@ export function Buttons (){
         filter(letter =>!localData.includes(letter.toLocaleUpperCase())).length === 0){
             isWin = true;
         }
-        
     }
 
     return (
         <>
-        <HangMan data={livesLeft}/>
-        <HiddenLetter data={localData} winStatus = {isWin}/>
+        <HangMan data={livesLeft} winStatus = {isWin}/>
+        <HiddenLetter data={localData} />
         <h2 className="livesLeft ">Lives left:<span> {livesLeft}</span></h2>
 
         <div className="buttonContainer">
