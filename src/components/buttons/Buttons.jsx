@@ -1,14 +1,19 @@
 import { useState } from "react";
 import { checkLetter, livesLeft } from "../checkLetters/check.letters";
 import { randomWord } from "../wordGenerator/WordGenereator";
+
+localStorage.setItem('',JSON.stringify([]))
+const localData = [];
+
 export function Buttons (){
     const [clicked, setToClicked] =useState({})
 
 
     function buttonPress(e){
-        console.log(e.target.dataset.state);
-        if(!e.target.dataset.state){
+        if(!e.target.dataset.state && livesLeft > 0){
             const letter = e.target.innerText;
+            localData.push(letter);
+            localStorage.setItem('',JSON.stringify(localData))
             setToClicked((prevState) => ({
                 ...prevState,
                 [letter]: randomWord.includes(letter.toLowerCase())?'included':'notIncluded',
@@ -26,7 +31,7 @@ export function Buttons (){
             </h2>
         
             <div>
-                <button onClick={buttonPress} data-state={clicked.Q || ''}>W</button>
+                <button onClick={buttonPress} data-state={clicked.Q || ''}>Q</button>
                 <button onClick={buttonPress} data-state={clicked.W || ''}>W</button>
                 <button onClick={buttonPress} data-state={clicked.E || ''}>E</button>
                 <button onClick={buttonPress} data-state={clicked.R || ''}>R</button>
