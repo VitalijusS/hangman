@@ -7,16 +7,15 @@ import img5 from '/5.png';
 import img6 from '/6.png';
 import dead from '/dead.png';
 import win from '/win.png';
-
+export let hangManLives = 0;
 
 export function HangMan(){
     const imageLits = [img1, img2, img3, img4, img5, img6, win, dead]
-    const todo = 2;
     return (
         <div className='test2'>
             <div className='imgContainer'>
                 <img src={hang} className='hangImg' alt="hang image" />
-                <img className='hangState' src={imageLits[todo]} alt="hang state img" />
+                <img className='hangState' src={imageLits[hangManLives]} alt="hang state img" />
 
             </div>
 

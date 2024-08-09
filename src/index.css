@@ -37,3 +37,15 @@ h1 {
     height: 600px;
     display: block;
 }
+.hiddenLetterContainer {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    gap: 1rem;
+}
+.hiddenLetter {
+    border-bottom: 2px solid #333;
+    width: 1rem;
+    text-align: center;
+    font-size: 2rem;
+}
