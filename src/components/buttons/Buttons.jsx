@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { checkLetter } from "../checkLetters/check.letters";
 
 export function Buttons (){
     const [clicked, setToClicked] =useState({})
@@ -10,6 +11,7 @@ export function Buttons (){
             ...prevState,
             [letter]: 'clicked',
         }));
+        checkLetter(letter);
     }
 
 
