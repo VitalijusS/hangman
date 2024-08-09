@@ -1,37 +1,52 @@
+import { useState } from "react";
+import { wordList } from "../data/words";
+
 export function Buttons (){
+    const [clicked, setToClicked] =useState({})
+
+
+    function buttonPress(e){
+        const letter = e.target.innerText;
+        setToClicked((prevState) => ({
+            ...prevState,
+            [letter]: 'clicked',
+        }));
+    }
+
+
     return (
         <div className="buttonContainer">
             <div>
-                <button data-state=''>Q</button>
-                <button data-state=''>W</button>
-                <button data-state=''>E</button>
-                <button data-state=''>R</button>
-                <button data-state=''>T</button>
-                <button data-state=''>Y</button>
-                <button data-state=''>U</button>
-                <button data-state=''>I</button>
-                <button data-state=''>O</button>
-                <button data-state=''>P</button>
+                <button onClick={buttonPress} data-state={clicked.Q || ''}>W</button>
+                <button onClick={buttonPress} data-state={clicked.W || ''}>W</button>
+                <button onClick={buttonPress} data-state={clicked.E || ''}>E</button>
+                <button onClick={buttonPress} data-state={clicked.R || ''}>R</button>
+                <button onClick={buttonPress} data-state={clicked.T || ''}>T</button>
+                <button onClick={buttonPress} data-state={clicked.Y || ''}>Y</button>
+                <button onClick={buttonPress} data-state={clicked.U || ''}>U</button>
+                <button onClick={buttonPress} data-state={clicked.I || ''}>I</button>
+                <button onClick={buttonPress} data-state={clicked.O || ''}>O</button>
+                <button onClick={buttonPress} data-state={clicked.P || ''}>P</button>
             </div>
             <div>
-                <button data-state=''>A</button>
-                <button data-state=''>S</button>
-                <button data-state=''>D</button>
-                <button data-state=''>F</button>
-                <button data-state=''>G</button>
-                <button data-state=''>H</button>
-                <button data-state=''>J</button>
-                <button data-state=''>K</button>
-                <button data-state=''>L</button>
+                <button onClick={buttonPress} data-state={clicked.A || ''}>A</button>
+                <button onClick={buttonPress} data-state={clicked.S || ''}>S</button>
+                <button onClick={buttonPress} data-state={clicked.D || ''}>D</button>
+                <button onClick={buttonPress} data-state={clicked.F || ''}>F</button>
+                <button onClick={buttonPress} data-state={clicked.G || ''}>G</button>
+                <button onClick={buttonPress} data-state={clicked.H || ''}>H</button>
+                <button onClick={buttonPress} data-state={clicked.J || ''}>J</button>
+                <button onClick={buttonPress} data-state={clicked.K || ''}>K</button>
+                <button onClick={buttonPress} data-state={clicked.L || ''}>L</button>
             </div>
             <div>
-                <button data-state=''>Z</button>
-                <button data-state=''>X</button>
-                <button data-state=''>C</button>
-                <button data-state=''>V</button>
-                <button data-state=''>B</button>
-                <button data-state=''>N</button>
-                <button data-state=''>M</button>
+                <button onClick={buttonPress} data-state={clicked.Z || ''}>Z</button>
+                <button onClick={buttonPress} data-state={clicked.X || ''}>X</button>
+                <button onClick={buttonPress} data-state={clicked.C || ''}>C</button>
+                <button onClick={buttonPress} data-state={clicked.V || ''}>V</button>
+                <button onClick={buttonPress} data-state={clicked.B || ''}>B</button>
+                <button onClick={buttonPress} data-state={clicked.N || ''}>N</button>
+                <button onClick={buttonPress} data-state={clicked.M || ''}>M</button>
 
             </div>
         </div>

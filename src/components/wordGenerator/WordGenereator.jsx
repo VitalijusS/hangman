@@ -1,6 +1,5 @@
 import { wordList } from "../data/words";
-
-export function WordGenerator(){
-    const randomWord = wordList[Math.floor(Math.random() * 1000)];   
-    return <p>{randomWord}</p> ;
+export const randomWord = wordGenerator();
+function wordGenerator(){
+    return wordList[Math.floor(Math.random() * 1000)];   
 }
