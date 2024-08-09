@@ -1,8 +1,10 @@
 import { useState } from "react";
 import { checkLetter, livesLeft } from "../checkLetters/check.letters";
 import { randomWord } from "../wordGenerator/WordGenereator";
+import { HiddenLetter } from "../hiddenLetter/Hiddenletter";
+import { HangMan } from "../hangman/HangMan";
 
-localStorage.setItem('',JSON.stringify([]))
+localStorage.setItem('pressedLetters',JSON.stringify([]))
 const localData = [];
 
 export function Buttons (){
@@ -13,7 +15,7 @@ export function Buttons (){
         if(!e.target.dataset.state && livesLeft > 0){
             const letter = e.target.innerText;
             localData.push(letter);
-            localStorage.setItem('',JSON.stringify(localData))
+            localStorage.setItem('pressedLetters',JSON.stringify(localData))
             setToClicked((prevState) => ({
                 ...prevState,
                 [letter]: randomWord.includes(letter.toLowerCase())?'included':'notIncluded',
@@ -25,11 +27,14 @@ export function Buttons (){
 
 
     return (
+        <>
+        <HangMan data={livesLeft}/>
+        <HiddenLetter data={localData}/>
+        <h2 className="livesLeft ">Lives left: 
+            <span> {livesLeft}</span>    
+        </h2>
+
         <div className="buttonContainer">
-            <h2 className="livesLeft ">Lives left: 
-                <span> {livesLeft}</span>    
-            </h2>
-        
             <div>
                 <button onClick={buttonPress} data-state={clicked.Q || ''}>Q</button>
                 <button onClick={buttonPress} data-state={clicked.W || ''}>W</button>
@@ -64,5 +69,6 @@ export function Buttons (){
 
             </div>
         </div>
+        </>
     )
 }
