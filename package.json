@@ -1,12 +1,9 @@
 {
-  "homepage": "https://vitalijuss.github.io/hangman/",
   "name": "hangman",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "predeply": "npm run build",
-    "deploy":"gh-pages -d dist",
     "build": "vite build",
     "preview": "vite preview",
     "dev": "vite",
