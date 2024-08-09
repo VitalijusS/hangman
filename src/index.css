@@ -71,7 +71,7 @@ h2 span {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: #999;
+    background-color: #aaa;
     width: 250px;
     height: 150px;
     display: flex;
@@ -80,9 +80,22 @@ h2 span {
     flex-direction: column;
     gap: 0.5rem;
     border-radius: 10px;
+    border: 2px solid black;
+}
+.gameOver .win {
+    color: green;
+}
+.gameOver .lost {
+    color: red;
+}
+.gameOver span {
+    font-weight: bold;
+    border-bottom: 2px solid black;
+    font-size: 1.2em;
 }
 .gameOver .restartBtn {
     padding: 0.5rem 1rem;
     border-radius: 0.3rem;
     cursor: pointer;
+    font-weight: bold;
 }
