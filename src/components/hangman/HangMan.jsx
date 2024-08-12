@@ -1,11 +1,11 @@
 import hang from '/hang.png';
-import img1 from '/1.png';
-import img2 from '/2.png';
-import img3 from '/3.png';
-import img4 from '/4.png';
-import img5 from '/5.png';
+import img1 from '/img1.png';
+import img2 from '/img2.png';
+import img3 from '/img3.png';
+import img4 from '/img4.png';
+import img5 from '/img5.png';
 import dead from '/dead.png';
-import img0 from '/0.png';
+import img0 from '/img0.png';
 import win from '/win.png';
 
 export function HangMan(params){
