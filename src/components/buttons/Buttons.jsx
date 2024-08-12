@@ -12,11 +12,18 @@ const localData = [];
 if(localStorage.getItem('score')===null){
     localStorage.setItem('score',JSON.stringify([0,0]))
 }
+
 let isWin = false;
 export function Buttons (){
+    function handleKeyDown(event) {
+      if ('abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'.includes(event.key)){
+            buttonPress({target:{innerText:event.key}});
+      }
+    }
     const [clicked, setToClicked] =useState({})
 
     function buttonPress(e){
+        console.log(e)
         if(!e.target.dataset.state && livesLeft > 0 && !isWin){
             const letter = e.target.innerText;
             localData.push(letter);
@@ -37,7 +44,7 @@ export function Buttons (){
     }
 
     return (
-        <>
+        <div onKeyDown={handleKeyDown}>
         <Score />
         {livesLeft===0?<GameLost />:''}
         {isWin?<GameWon />:''}
@@ -45,7 +52,7 @@ export function Buttons (){
         <HiddenLetter data={localData} />
         <h2 className="livesLeft ">Lives left:<span> {livesLeft}</span></h2>
 
-        <div className="buttonContainer">
+        <div className="buttonContainer" >
             <div>
                 <button onClick={buttonPress} data-state={clicked.Q || ''}>Q</button>
                 <button onClick={buttonPress} data-state={clicked.W || ''}>W</button>
@@ -80,6 +87,6 @@ export function Buttons (){
 
             </div>
         </div>
-        </>
+        </div>
     )
 }
