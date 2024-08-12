@@ -17,7 +17,9 @@ let isWin = false;
 export function Buttons (){
     function handleKeyDown(event) {
       if ('abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'.includes(event.key)){
-            buttonPress({target:{innerText:event.key}});
+            // buttonPress({target:{innerText:event.key}});
+            console.log(event.key);
+            
       }
     }
     const [clicked, setToClicked] =useState({})
