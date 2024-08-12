@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { checkLetter, livesLeft } from "../checkLetters/check.letters";
+import { checkLetter, livesLeft } from "../checkLetters/checkLetters";
 import { randomWord } from "../wordGenerator/WordGenereator";
 import { HiddenLetter } from "../hiddenLetter/Hiddenletter";
 import { HangMan } from "../hangman/HangMan";
