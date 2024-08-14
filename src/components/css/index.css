@@ -45,6 +45,27 @@ h1 {
 .buttonContainer button[data-state='clicked'] {
     background-color: #333;
 }
+.abcButtons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.1rem;
+}
+.abcButtons button {
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+.abcButtons button[data-state='included'] {
+    background-color: green;
+}
+.abcButtons button[data-state='notIncluded'] {
+    background-color: red;
+}
+.abcButtons button[data-state='clicked'] {
+    background-color: #333;
+}
 .imgContainer {
     position: relative;
     height: 600px;
