@@ -36,6 +36,10 @@ h1 {
     cursor: pointer;
     gap: 1rem;
 }
+.buttonRow{
+    display: flex;
+    gap: 2px;
+}
 .buttonContainer button[data-state='included'] {
     background-color: green;
 }
