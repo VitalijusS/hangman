@@ -1,6 +1,11 @@
-const score = JSON.parse(localStorage.getItem('score'));
-export function Score(){
+if (localStorage.getItem('winScore') === null || localStorage.getItem('loseScore') === null) {
+    localStorage.setItem('winScore', 0)
+    localStorage.setItem('loseScore', 0)
+}
+const winScore = localStorage.getItem('winScore');
+const loseScore = localStorage.getItem('loseScore');
+export function Score() {
     return (
-        <h2 className="score">Wins: {score[0]/2} Deaths:{score[1]/2}</h2>
+        <h2 className="score">Wins: {winScore / 2} Deaths:{loseScore / 2}</h2>
     )
 }
