@@ -36,7 +36,7 @@ https://git-scm.com
 
 Would like to run this project locally? Open terminal and follow these steps:
 
-1. Clone the repo
+1. Clone the repo to your selected folder
     ```sh
     git clone https://github.com/VitalijusS/hangman .
     ```
