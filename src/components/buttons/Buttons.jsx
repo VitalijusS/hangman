@@ -10,7 +10,7 @@ import { Score } from "../score/Score";
 localStorage.setItem('pressedLetters', JSON.stringify([]))
 const localData = [];
 if (localStorage.getItem('score') === null) {
-    localStorage.setItem('score', JSON.stringify([0, 0]))
+    localStorage.setItem('score', JSON.stringify([0, 0]));
 }
 
 let isWin = false;
