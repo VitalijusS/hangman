@@ -4,16 +4,15 @@ import { randomWord } from "../wordGenerator/WordGenereator"
 export function GameLost() {
     const [loseScore, setLoseScore] = useState(localStorage.getItem('loseScore'));
     useEffect(() => {
-        console.log('gamelost')
         setLoseScore(num => +num + 1);
 
     }, [])
     localStorage.setItem('loseScore', loseScore);
-    useEffect(() => {
-        window.addEventListener('keyup', () => {
-            window.location.reload()
-        })
-    })
+    // useEffect(() => {
+    // window.addEventListener('keyup', () => {
+    //     window.location.reload()
+    // })
+    // })
 
 
     return (

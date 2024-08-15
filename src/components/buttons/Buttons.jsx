@@ -33,14 +33,10 @@ export function Buttons() {
             letter = e.target.innerText;
         }
         if ('abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'.includes(letter)) {
-
             if (livesLeft > 0 && !isWin && !localData.includes(letter)) {
-                // console.log(!isWin);
-                // console.log(livesLeft);
-                // console.log(!localData.includes(letter));
                 localData.push(letter);
                 localStorage.setItem('pressedLetters', JSON.stringify(localData))
-                if (!checkLetter(letter)) {
+                if (!checkLetter(letter) && livesLeft > 0) {
                     setLivesLeft(num => num - 1)
                 }
                 changeAbcState(abc.map(item => !localData.includes(item.text) ? { ...item } :
@@ -48,21 +44,18 @@ export function Buttons() {
                         text: item.text, state: checkLetter(item.text) ?
                             'included' : 'notIncluded'
                     }))
-                console.log(abc);
             }
         }
     }
 
     useEffect(() => {
         if (randomWord.split('').
-            filter(letter => !localData.includes(letter.toLocaleUpperCase())).length === 0) {
+            filter(letter => !localData.includes(letter.toUpperCase())).length === 0) {
             window.removeEventListener('keyup', () => (e) => {
                 buttonPress(e.key.toUpperCase())
             }, false)
 
             changeIsWin(true);
-            console.log(isWin);
-
         }
 
     }, [abc]);
@@ -77,12 +70,12 @@ export function Buttons() {
     return (
         <div >
             <Score />
-            {livesLeft < 0 ? <GameLost /> : ''}
+            {livesLeft <= 0 ? <GameLost /> : ''}
             {isWin ? <GameWon /> : ''}
             <HangMan data={livesLeft} winStatus={isWin} />
             <HiddenLetter data={localData} />
             <h2 className="livesLeft ">Lives left:<span> {livesLeft}</span></h2>
-            <MoreButtons func={buttonPress} data={abc} />
+            <MoreButtons func={buttonPress} data={abc} livesLeft={livesLeft} />
         </div>
     )
 }

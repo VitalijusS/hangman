@@ -9,9 +9,11 @@ export function GameWon() {
     }, [])
 
     localStorage.setItem('winScore', winScore)
-    useEffect(() => {
-        window.removeEventListener('keyup')
-    })
+    // useEffect(() => {
+    //     window.addEventListener('keyup', () => {
+    //         window.location.reload()
+    //     })
+    // })
 
     return (
         <div className="gameOver">

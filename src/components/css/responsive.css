@@ -1,8 +1,8 @@
 @media (max-width: 1200px) {
-    .buttonContainer {
-        gap: 0.3rem;
+    .abcButtons {
+        width: 430px;
     }
-    .buttonContainer button {
+    .abcButtons button {
         padding: 0.5rem 1rem;
         cursor: pointer;
     }
@@ -28,12 +28,21 @@
     .hangImg {
         height: 450px;
     }
-}
-@media (max-width: 800px) {
-    .buttonContainer {
-        gap: 0.2rem;
+
+    .abcButtons :nth-child(10){
+        margin-right: auto;
+        
     }
-    .buttonContainer button {
+    .abcButtons :nth-child(19){
+        margin-right: 20px;
+    }
+}
+
+@media (max-width: 800px) {
+    .abcButtons {
+        gap: 0.1rem;
+    }
+    .abcButtons button {
         padding: 0.4rem 0.8rem;
         cursor: pointer;
     }
@@ -61,13 +70,16 @@
     }
 }
 @media (max-width: 500px) {
-    .buttonContainer {
+    .abcButtons {
         gap: 0.1rem;
+        width: 300px;
     }
-    .buttonContainer button {
+    .abcButtons button {
         padding: 0.2rem 0.5rem;
         cursor: pointer;
         gap: 0.1rem;
+        width: 27px;
+        height: 20px;
     }
 
     .hiddenLetterContainer {
@@ -94,4 +106,7 @@
     .hangState.win {
         top: 90px;
     }
+    .livesLeft {
+    top: 3rem;
+}
 }
