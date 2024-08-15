@@ -10,6 +10,7 @@ import { useEffect, useState } from "react";
 
 localStorage.setItem('pressedLetters', JSON.stringify([]))
 
+
 const localData = [];
 
 export function Buttons() {
@@ -76,6 +77,8 @@ export function Buttons() {
             <HiddenLetter data={localData} />
             <h2 className="livesLeft ">Lives left:<span> {livesLeft}</span></h2>
             <MoreButtons func={buttonPress} data={abc} livesLeft={livesLeft} />
+
+
         </div>
     )
 }

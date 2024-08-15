@@ -7,5 +7,6 @@ const loseScore = localStorage.getItem('loseScore');
 export function Score() {
     return (
         <h2 className="score">Wins: {winScore / 2} Deaths:{loseScore / 2}</h2>
+
     )
 }
