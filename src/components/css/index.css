@@ -78,6 +78,8 @@ h1 {
     cursor: pointer;
     width: 40px;
     height: 35px;
+    border: 1px solid #999;
+    border-radius: 5px;
 }
 .abcButtons button[data-state='included'] {
     background-color: green;
@@ -116,10 +118,10 @@ h1 {
 }
 .hiddenLetter {
     border-bottom: 2px solid #333;
-    width: 1em;
+    width: 1.5em;
     text-align: center;
     font-size: 2em;
-    height: 1.2em;
+    height: 1.3em;
 }
 .gameOver {
     z-index: 1;
