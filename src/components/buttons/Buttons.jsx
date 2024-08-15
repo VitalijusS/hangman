@@ -69,7 +69,7 @@ export function Buttons() {
 
 
     return (
-        <div >
+        <div className="main" >
             <Score />
             {livesLeft <= 0 ? <GameLost /> : ''}
             {isWin ? <GameWon /> : ''}
