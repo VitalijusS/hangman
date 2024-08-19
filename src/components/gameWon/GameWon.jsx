@@ -9,12 +9,6 @@ export function GameWon() {
     }, [])
 
     localStorage.setItem('winScore', winScore)
-    // useEffect(() => {
-    //     window.addEventListener('keyup', () => {
-    //         window.location.reload()
-    //     })
-    // })
-
     return (
         <div className="gameOver">
             <h3 className="win">You won</h3>
