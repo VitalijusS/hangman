@@ -8,7 +8,7 @@ import { Score } from "./components/score/Score";
 import { Buttons } from "./components/buttons/Buttons";
 import { useEffect, useState } from "react";
 
-localStorage.setItem('pressedLetters', JSON.stringify([]))
+localStorage.setItem('pressedLetters', JSON.stringify([]));
 const localData = [];
 
 function App() {
@@ -26,7 +26,7 @@ function App() {
   function buttonPress(e) {
     let letter = '';
     if (typeof e === 'string') {
-      letter = e
+      letter = e;
     } else {
       letter = e.target.innerText;
     }
@@ -54,13 +54,13 @@ function App() {
   }, [abc]);
 
   useEffect(() => {
-    window.addEventListener('keyup', (e) => {
-      if (isWin || livesLeft < 1) {
-        window.location.reload()
-      } else {
-        buttonPress(e.key.toUpperCase())
-      }
-    })
+    function key(e) {
+      buttonPress(e.key.toUpperCase())
+    }
+    window.addEventListener('keyup', key);
+    return () => {
+      window.removeEventListener('keyup', key);
+    }
   })
 
   return (
