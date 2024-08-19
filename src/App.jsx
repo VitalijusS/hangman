@@ -64,7 +64,7 @@ function App() {
   })
 
   return (
-    <div >
+    <div className="container">
       <Score />
       {livesLeft <= 0 ? <GameLost /> : ''}
       {isWin ? <GameWon /> : ''}
