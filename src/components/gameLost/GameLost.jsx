@@ -8,12 +8,6 @@ export function GameLost() {
 
     }, [])
     localStorage.setItem('loseScore', loseScore);
-    // useEffect(() => {
-    // window.addEventListener('keyup', () => {
-    //     window.location.reload()
-    // })
-    // })
-
 
     return (
         <div className="gameOver">
