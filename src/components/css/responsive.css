@@ -11,10 +11,9 @@
         gap: 0.7rem;
     }
     .hiddenLetter {
-        width: 1.5em;
-        text-align: center;
+        width: 1em;
         font-size: 1.6em;
-        height: 1.3em;
+        height: 1.2em;
     }
     .imgContainer {
         height: 500px;
@@ -44,7 +43,7 @@
     }
     .abcButtons button {
         padding: 0.4rem 0.8rem;
-        cursor: pointer;
+        
     }
 
     .hiddenLetterContainer {
@@ -57,7 +56,7 @@
         height: 1.4em;
     }
     .imgContainer {
-        height: 500px;
+        height: 420px;
     }
     .hangState {
         position: absolute;
@@ -76,8 +75,6 @@
     }
     .abcButtons button {
         padding: 0.2rem 0.5rem;
-        cursor: pointer;
-        gap: 0.1rem;
         width: 27px;
         height: 20px;
     }
